@@ -224,9 +224,22 @@ class AdvancedCalculator:
 
             return log_num/log_base
        
+    def pi(self):
+        """
+        Calculate the value of pi using the Leibniz formula.
         
+        Returns:
+            Approximation of pi
+        """
+        pi = 0
+        for n in range(1000000):
+            pi += ((-1) ** n) / (2 * n + 1)
+        return 4 * pi
+    
     def sine(self, angle):
-        pi=3.141592653589793
+        pi = self.pi()
+        
+        
         rad = angle* pi /180
 
         term = rad
